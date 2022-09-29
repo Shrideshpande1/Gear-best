@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { Grid,Box,GridItem,Image,Text, Button, } from "@chakra-ui/react";
 import Categories_and_slider from "../Links/Categories_and_slider";
 import Options_and_slider from "./Options_and_silder";
-
+import AllRoutes from "../Links/AllRoutes";
 import Super_deal from "./Super_deal";
 import Collction from "./Collction"
 import Bottom_img from "./bottom_img";
@@ -29,7 +29,7 @@ axios.get(` http://localhost:8000/posts`)
   <Navbar></Navbar>
   <Categories_and_slider/>
 <Options_and_slider/>
-
+{/* <AllRoutes/> */}
 <Bottom_img/>
 <Collction/>
 <Super_deal/>
