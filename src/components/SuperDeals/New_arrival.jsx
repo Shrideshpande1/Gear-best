@@ -38,14 +38,16 @@ function New_Arrival(){
       <Box
       bg="gray.50"
    
-      spacing="10"
+      spacing="20"
       p={2}
       textAlign="center"
-      rounded="lg"
+      
       color="gray.400"
+      boxShadow='lg'
+      margin={"10px"}
       >
-        <Image style={{width:"220px",height:"200px"}} boxsize="ls" src={item.image}/>
-        <Text>Title:{item.title}</Text>
+        <Image style={{width:"170px",height:"170px"}} boxsize="ls" src={item.image}/>
+        <Box noOfLines={2}>Title:{item.title}</Box>
         <Text>Price:{item.price}$</Text>
         <Button colorScheme='blue'>Cart</Button>
       </Box>

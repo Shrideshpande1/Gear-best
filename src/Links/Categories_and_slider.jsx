@@ -4,23 +4,24 @@ import { useState } from "react";
 import { useEffect } from "react";
 // import { Grid,Box,GridItem,Image,Text, Button, } from "@chakra-ui/react";
 import { resolvePath } from "react-router-dom";
-import { Grid, GridItem } from '@chakra-ui/react'
+import { Grid, GridItem ,Flex} from '@chakra-ui/react'
 import { NavLink } from "react-router-dom";
 
 const Links=[
-  {path:"/" ,title:"Home"},
+  // {path:"/" ,title:"Home"},
   {path:"/Super_deal" ,title:"Super deal"},
   {path:"/App_Only" ,title:"App Only"},
   {path:"/New_Arrival" ,title:"New Arrival"},
-  {path:"/Pre_Booking" ,title:"Pre Booking"}
+  {path:"/Pre_Booking" ,title:"Pre Booking"},
+  {path:"/Login" ,title:"Login"}
 ]
 const Categories_and_slider = () => {
-  return <div>{Links.map((link)=>(
+  return <Flex justifyContent={"space-around"}>{Links.map((link)=>(
     <NavLink key={link.path} to={link.path}>
       {link.title}
 
     </NavLink>
-  ))}</div>;
+  ))}</Flex>;
 };
 
 export default Categories_and_slider;

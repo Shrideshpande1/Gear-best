@@ -34,16 +34,18 @@ axios.get(`http://localhost:8000/collection`)
   <Grid templateColumns={{base:"repeat(5,1fr)"}} Gap={10}>
     {prod.map((item)=><GridItem key={item.id}>
       <Box
-      bg="gray.50"
-    //   columns={{sm:1,md:2,lg:3}}
-      spacing="10"
-      p={2}
-      textAlign="center"
-      rounded="lg"
-      color="gray.400"
+    bg="gray.50"
+   
+    spacing="20"
+    p={2}
+    textAlign="center"
+    
+    color="gray.400"
+    boxShadow='lg'
+    margin={"10px"}
       >
         <Image style={{width:"150px",height:"150px"}} boxsize="ls" src={item.img}/>
-        <Text>Title:{item.title}</Text>
+        <Box noOfLines={2}>Title:{item.title}</Box>
        
     
       </Box>

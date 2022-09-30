@@ -26,6 +26,7 @@ axios.get(` http://localhost:8000/posts`)
 
  
   return <>
+ 
   <Navbar></Navbar>
   <Categories_and_slider/>
 <Options_and_slider/>
@@ -36,18 +37,20 @@ axios.get(` http://localhost:8000/posts`)
   <Grid templateColumns={{base:"repeat(5,1fr)"}} Gap={10}>
     {prod.map((item)=><GridItem key={item.id}>
       <Box
-      bg="gray.50"
+     bg="gray.50"
    
-      spacing="10"
-      p={2}
-      textAlign="center"
-      rounded="lg"
-      color="gray.400"
+     spacing="20"
+     p={2}
+     textAlign="center"
+     
+     color="gray.400"
+     boxShadow='lg'
+     margin={"10px"}
       >
-        <Image style={{width:"220px",height:"200px"}} boxsize="ls" src={item.image}/>
-        <Text>Title:{item.title}</Text>
-        <Text>Price:{item.price}$</Text>
-        <Button colorScheme='blue'>Cart</Button>
+        <Image style={{width:"170px",height:"170px",margin:"auto"}} boxsize="ls" src={item.image}/>
+        <Box  noOfLines={2} style={{textAlign:"left"}}>Title:{item.title}</Box>
+        <Text  style={{textAlign:"left",color:"rgb(243,2,64)"}}>Price:{item.price}$</Text>
+      
       </Box>
       
 </GridItem>)}

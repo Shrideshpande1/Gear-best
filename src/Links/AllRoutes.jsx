@@ -5,6 +5,7 @@ import Super_deal from "../components/SuperDeals/SuperDeal";
 import App_Only from "../components/SuperDeals/AppOnly";
 import New_Arrival from "../components/SuperDeals/New_arrival";
 import Pre_Booking from "../Booking/prebooking";
+import Login from "../components/LogIn";
 // all the routing using the routing library should be done from here; 
 
 const AllRoutes = () => {
@@ -15,6 +16,7 @@ const AllRoutes = () => {
       <Route path="/App_Only" element={<App_Only/>}></Route>
       <Route path="/New_Arrival" element={<New_Arrival/>}></Route>
       <Route path="/Pre_Booking" element={<Pre_Booking/>}></Route>
+      <Route path="/Login" element={<Login/>}></Route>
     </Routes>
   </div>;
 };

@@ -22,16 +22,18 @@ axios.get(`http://localhost:8000/Super_deal`)
   <Grid templateColumns={{base:"repeat(5,1fr)"}} Gap={10}>
     {prod.map((item)=><GridItem key={item.id}>
       <Box
-      bg="gray.50"
+     bg="gray.50"
    
-      spacing="10"
-      p={2}
-      textAlign="center"
-      rounded="lg"
-      color="gray.400"
+     spacing="20"
+     p={2}
+     textAlign="center"
+     
+     color="gray.400"
+     boxShadow='lg'
+     margin={"10px"}
       >
-        <Image style={{width:"220px",height:"200px"}} boxsize="ls" src={item.image}/>
-        <Text>Title:{item.title}</Text>
+        <Image style={{width:"170px",height:"170px"}} boxsize="ls" src={item.image}/>
+        <Box noOfLines={2}>Title:{item.title}</Box>
         <Text>Price:{item.price}$</Text>
         
       </Box>

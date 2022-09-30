@@ -29,13 +29,13 @@ function Pre_Booking() {
             alt="Dan Abramov"
           />
         </Box>
-
-        <Box>
-          <h1>
+{/* text */}
+        <Box marginLeft={"40px"}>
+          <h1 style={{ textAlign: "left",width:"70%"}}>
             Smart Watch Men Full Touch Screen Sport Fitness Watch IP67
             Waterproof Bluetooth For Android ios smartwatch Men+box - Black
           </h1>
-          <p>New Smart Watch</p>
+          <p style={{ textAlign: "left",width:"70%"}}>New Smart Watch</p>
           <Image
             style={{ width: "150px" }}
             src="https://www.pngplay.com/wp-content/uploads/6/5-Star-Rating-Vector-Transparent-PNG.png"
@@ -48,9 +48,10 @@ function Pre_Booking() {
               backgroundColor: "rgb(243,2,64)",
               width: "600px",
               color: "white",
+              justifyContent:"space-between"
             }}
           >
-            <Box style={{}}>FLASH SALE</Box>
+            <Box style={{fontSize:"25px",alignItems:"center"}}>FLASH SALE</Box>
             <Box>
               <p>for sale</p>
               <p>17 days left</p>
@@ -64,7 +65,7 @@ function Pre_Booking() {
               marginTop: "20px",
             }}
           >
-            <Box style={{ marginRight: "20PX" }}>
+            <Box style={{ marginRight: "80PX" }}>
               <p>Price</p>
             </Box>
             <Box>
@@ -73,9 +74,9 @@ function Pre_Booking() {
                   display: "flex",
                 }}
               >
-                <Box>$29.99</Box>
-                <Box>$35.99</Box>
-                <Box style={{ backgroundColor: "rgb(243,2,64)" }}>50%off</Box>
+                <Box color={"rgb(243,2,64)"} fontSize={"25px"} marginRight={"10px"}>$29.99</Box>
+                <Box>RRP $35.99</Box>
+                <Box style={{ backgroundColor: "rgb(243,2,64)", marginLeft: "10PX" ,height:"20px"}}>50%off</Box>
               </Box>
               <Box>Save an extra $0.06 for using the App</Box>
             </Box>
@@ -89,11 +90,12 @@ function Pre_Booking() {
               marginTop: "20px",
             }}
           >
-            <Box style={{ marginRight: "20PX" }}>
+            <Box >
               <p>Shipping</p>
             </Box>
 
-            <Box>
+            <Box textAlign={"left"}
+            marginLeft={"50px"}>
               <Box>FREE SHIPING to United States Via Registered Air Mall</Box>
               <Box>
                 Ship between Oct 03 - Oct 07 , Estimated Shipping Time: 15:60
@@ -116,6 +118,7 @@ function Pre_Booking() {
             <Box
               style={{
                 display: "flex",
+                marginLeft:'50px'
               }}
             >
               <Button>Black</Button>
@@ -133,14 +136,14 @@ function Pre_Booking() {
             }}
           >
             <Box style={{ marginRight: "20PX" }}>
-              <p>Qnt</p>
+              <p >Qnt</p>
             </Box>
             <Box
               style={{
                 display: "flex",
               }}
             >
-              <Box>
+              <Box marginLeft={"62px"}>
                 <Counter />
               </Box>
               <Box style={{ marginLeft: "20PX" }}>
@@ -155,6 +158,8 @@ function Pre_Booking() {
               marginTop: "20px",
             }}
           >
+{/* //Description */}
+            
             <Button
               style={{
                 backgroundColor: "rgb(243,2,64)",
@@ -269,19 +274,22 @@ function Pre_Booking() {
         {prod.map((item) => (
           <GridItem key={item.id}>
             <Box
-              bg="gray.50"
-              spacing="10"
-              p={2}
-              textAlign="center"
-              rounded="lg"
-              color="gray.400"
+             bg="gray.50"
+   
+             spacing="20"
+             p={2}
+             textAlign="center"
+             
+             color="gray.400"
+             boxShadow='lg'
+             margin={"10px"}
             >
               <Image
-                style={{ width: "220px", height: "200px" }}
+                style={{ width: "170px", height: "170px" }}
                 boxsize="ls"
                 src={item.image}
               />
-              <Text>Title:{item.title}</Text>
+              <Box noOfLines={2}>Title:{item.title}</Box>
               <Text>Price:{item.price}$</Text>
             </Box>
           </GridItem>
@@ -291,7 +299,7 @@ function Pre_Booking() {
      
 <Box style={{width:"80%",margin :'auto'}}>
 
-<h1 style={{textAlign:"left"}}>Description</h1>
+<h1 style={{textAlign:"left",fontWeight:"bold",fontSize:"25px",marginTop:"20px"}}>Description</h1>
 <br />
 <Box style={{textAlign:"left"}}>
 
