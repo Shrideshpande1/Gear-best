@@ -4,7 +4,10 @@ import {
   Container,
   FormControl,
   FormLabel,
-  Input,
+  Input, Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
 } from "@chakra-ui/react";
 import axios from "axios";
 import {Navigate} from "react-router-dom"
@@ -41,13 +44,17 @@ const Login = () => {
       password:pass
     }
     ).then((res)=>{
-console.log(res)
+// console.log(res)
     //   setToken(res.data) 
     //   toggleAuth(token)
     console.log(res.status)
-    if(res.status===200){
+    if(res.status===400){
         return(<>
-          <Navigate to='/Super_deal' ></Navigate>
+          <Alert status='error'>
+  <AlertIcon />
+  <AlertTitle>Your browser is outdated!</AlertTitle>
+  <AlertDescription>Your Chakra experience may be degraded.</AlertDescription>
+</Alert>
         </>
         
         )
