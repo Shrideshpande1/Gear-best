@@ -8,6 +8,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Divider } from '@chakra-ui/react'
 import Footer from "../components/Footer";
+import { NavLink } from "react-router-dom";
 
 function Pre_Booking() {
   const [prod, setProd] = useState([]);
@@ -159,8 +160,12 @@ function Pre_Booking() {
             }}
           >
 {/* //Description */}
+{/* <NavLink to={"/Pre_Booking"}> */}
+{/* </NavLink> */}
+            <NavLink to={"/Cart"}>
             
-            <Button
+           
+              <Button
               style={{
                 backgroundColor: "rgb(243,2,64)",
                 marginRight: "20PX",
@@ -170,6 +175,8 @@ function Pre_Booking() {
             >
               Add to Cart
             </Button>
+            </NavLink>
+            <NavLink to={"/Booking"}>
             <Button
               style={{
                 color: "rgb(243,2,64)",
@@ -179,6 +186,7 @@ function Pre_Booking() {
             >
               Buy Now
             </Button>
+            </NavLink>
 
             <Image
               style={{
@@ -188,7 +196,8 @@ function Pre_Booking() {
               alt="Dan Abramov"
             />
           </Box>
-
+{/* Add to Cart */}
+{/* Buy */}
           {/* ======================== */}
           <Box
             style={{

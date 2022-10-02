@@ -11,6 +11,7 @@ import Super_deal from "./Super_deal";
 import Collction from "./Collction"
 import Bottom_img from "./bottom_img";
 import Footer from "./Footer";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -47,7 +48,9 @@ axios.get(` http://localhost:8000/posts`)
      boxShadow='lg'
      margin={"10px"}
       >
+       <NavLink to={"/Pre_Booking"}>
         <Image style={{width:"170px",height:"170px",margin:"auto"}} boxsize="ls" src={item.image}/>
+        </NavLink>
         <Box  noOfLines={2} style={{textAlign:"left"}}>Title:{item.title}</Box>
         <Text  style={{textAlign:"left",color:"rgb(243,2,64)"}}>Price:{item.price}$</Text>
       
@@ -60,3 +63,6 @@ axios.get(` http://localhost:8000/posts`)
 };
 
 export default Home;
+{/* <NavLink to={"/"}>
+<Image   style={{width:"250px"}} src='https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png' alt='Dan Abramov' />
+</NavLink> */}

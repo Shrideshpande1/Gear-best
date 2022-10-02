@@ -10,8 +10,11 @@ import {
   AlertDescription,
 } from "@chakra-ui/react";
 import axios from "axios";
-import {Navigate} from "react-router-dom"
+import {Navigate, NavLink} from "react-router-dom"
 import { useState } from "react";
+import Navbar from "./Navbar";
+import Home from "./home";
+import Footer from "./Footer";
 // import { AuthContext } from "./AuthContext/AuthContextProvider";
 // 0. axios should be used for making network requests;
 
@@ -28,7 +31,7 @@ import { useState } from "react";
 // 6. Proper Alert should be displayed to user upon unsuccessful API call. the message can be `Something went wrong. please refresh.`
 
 const Login = () => {
-
+// const [login,SetLogin]=React.useState("false")
   const [email, setEmail] = React.useState("");
   const [pass, setPass] = React.useState("");
 //   const [token,setToken]= useState('')
@@ -48,28 +51,37 @@ const Login = () => {
     //   setToken(res.data) 
     //   toggleAuth(token)
     console.log(res.status)
-    if(res.status===400){
-        return(<>
-          <Alert status='error'>
-  <AlertIcon />
-  <AlertTitle>Your browser is outdated!</AlertTitle>
-  <AlertDescription>Your Chakra experience may be degraded.</AlertDescription>
-</Alert>
-        </>
-        
-        )
-      };
+    if (res.status === 200) {
+    
+      alert("login sucesfully");
+      return 
+      <Navigate to={"/"}/>
+      
+      }
+      else if(res.status === 400){
+        console.log(error)
+        alert("Email or password is wrong");
+        return;
+      }
+ 
     })
   }
- 
+  // eve.holt@reqres.in
+  // cityslicka
+  
   return (
+
+    
+    
     <Container>
+    
       <FormControl isRequired>
         <FormLabel>Email</FormLabel>
         <Input
           placeholder="Enter Email"
           onChange={handleChange}
-          value={email}
+        
+      
         ></Input>
       </FormControl>
       <FormControl isRequired>
@@ -77,12 +89,20 @@ const Login = () => {
         <Input
           placeholder="Enter Password"
           onChange={handleChangePass}
-          value={pass}
+       
+        
         ></Input>
       </FormControl>
       <Button onClick={handleClick} >Submit</Button>
-   
+  
     </Container>
+   
+   
   );
 };
 export default Login;
+
+
+
+
+

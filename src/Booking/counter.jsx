@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Grid,Box,GridItem,Image,Text, Button, } from "@chakra-ui/react";
 
 export default function Counter() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
  
 

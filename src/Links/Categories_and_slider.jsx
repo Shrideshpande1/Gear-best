@@ -12,8 +12,11 @@ const Links=[
   {path:"/Super_deal" ,title:"Super deal"},
   {path:"/App_Only" ,title:"App Only"},
   {path:"/New_Arrival" ,title:"New Arrival"},
-  {path:"/Pre_Booking" ,title:"Pre Booking"},
-  {path:"/Login" ,title:"Login"}
+  // {path:"/SignIn" ,title:" SignIn"},
+  // {path:"/Pre_Booking" ,title:"Pre Booking"},
+  // {path:"/Login" ,title:"Login"},
+  // {path:"/Cart" ,title:"Cart"},
+  // {path:"/Booking" ,title:"Booking"}
 ]
 const Categories_and_slider = () => {
   return <Flex justifyContent={"space-around"}>{Links.map((link)=>(
