@@ -41,4 +41,4 @@
 
 
 ## Deployed link
-- https://6371ebf512789d75d605c3fe--extraordinary-lokum-e2535c.netlify.app/
+- https://guarded-boat-4126.netlify.app/
